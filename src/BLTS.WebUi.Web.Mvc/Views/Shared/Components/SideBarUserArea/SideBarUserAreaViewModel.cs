@@ -10,7 +10,7 @@ namespace BLTS.WebUi.Web.Views.Shared.Components.SideBarUserArea
 
         public string GetShownLoginName()
         {
-            var userName = LoginInformations.User.UserName;
+            string userName = LoginInformations.User != null ? LoginInformations.User.UserName : "Guest";
 
             if (!IsMultiTenancyEnabled)
             {
@@ -18,8 +18,8 @@ namespace BLTS.WebUi.Web.Views.Shared.Components.SideBarUserArea
             }
 
             return LoginInformations.Tenant == null
-                ? ".\\" + userName
-                : LoginInformations.Tenant.TenancyName + "\\" + userName;
+                ? userName
+                : LoginInformations.Tenant.TenancyName + " - " + userName;
         }
     }
 }

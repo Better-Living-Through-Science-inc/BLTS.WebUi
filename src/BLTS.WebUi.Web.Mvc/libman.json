@@ -98,7 +98,7 @@
       ]
     },
     {
-      "library": "@fortawesome/fontawesome-free@5.11.2",
+      "library": "@fortawesome/fontawesome-free@5.13.0",
       "provider": "jsdelivr",
       "destination": "wwwroot/libs/font-awesome"
     },
