@@ -7,37 +7,36 @@
 @inject IWebResourceManager WebResourceManager
 @inject IAlertManager AlertManager
 @inject ILanguageManager LanguageManager
-@{
-    AbpAntiForgeryManager.SetCookie(Context);
+@{ AbpAntiForgeryManager.SetCookie(Context);
 
-    var pageTitle = !string.IsNullOrWhiteSpace(ViewBag.Title) ? ViewBag.Title + " / " : "";
-    pageTitle += "Better Living Through Science";
+  string pageTitle = !string.IsNullOrWhiteSpace(ViewBag.Title) ? ViewBag.Title + " - " : "";
+  pageTitle += "Better Living Through Science"; 
 }
 <!DOCTYPE html>
 <html lang="@LanguageManager.CurrentLanguage.Name">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>@pageTitle</title>
+  <title>@pageTitle</title>
 
-    @await Html.PartialAsync("_Styles.cshtml")
-    @RenderSection("styles", required: false)
+  @await Html.PartialAsync("_Styles.cshtml")
+  @RenderSection("styles", required: false)
 </head>
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
-        @await Html.PartialAsync("_Header.cshtml")
-        @await Html.PartialAsync("_SideBar.cshtml")
-        <div class="content-wrapper">
-            @await Html.PartialAsync("_Alerts.cshtml")
-            @RenderBody()
-        </div>
-        @await Html.PartialAsync("_Footer.cshtml")
+  <div class="wrapper">
+    @await Html.PartialAsync("_Header.cshtml")
+    @await Html.PartialAsync("_SideBar.cshtml")
+    <div class="content-wrapper">
+      @await Html.PartialAsync("_Alerts.cshtml")
+      @RenderBody()
     </div>
+    @await Html.PartialAsync("_Footer.cshtml")
+  </div>
 
-    @await Html.PartialAsync("_Scripts.cshtml")
-    @RenderSection("scripts", required: false)
-    @WebResourceManager.RenderScripts()
+  @await Html.PartialAsync("_Scripts.cshtml")
+  @RenderSection("scripts", required: false)
+  @WebResourceManager.RenderScripts()
 </body>
 </html>
