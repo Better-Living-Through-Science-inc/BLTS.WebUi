@@ -77,17 +77,22 @@ namespace BLTS.WebUi.Web.Startup
       else
       {
         app.UseExceptionHandler("/Error");
+        app.UseHsts();
       }
 
       app.UseStaticFiles();
 
       app.UseRouting();
 
+      app.UseHttpsRedirection();
+
       app.UseAuthentication();
 
       app.UseJwtTokenMiddleware();
 
       app.UseAuthorization();
+
+      app.UseStatusCodePagesWithRedirects("/Error?code={0}");
 
       app.UseEndpoints(endpoints =>
       {
