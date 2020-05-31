@@ -81,10 +81,10 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/view-resources/Views/_Bundles/home-index.min.js",
+    "outputFileName": "wwwroot/view-resources/Views/_Bundles/about-budget.min.js",
     "inputFiles": [
       "wwwroot/libs/chartjs/dist/Chart.js",
-      "wwwroot/view-resources/Views/Home/Index.js"
+      "wwwroot/view-resources/Views/About/Budget.js"
     ]
   },
   {
