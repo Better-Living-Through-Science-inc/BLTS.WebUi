@@ -4,7 +4,6 @@ using BLTS.WebUi.Controllers;
 
 namespace BLTS.WebUi.Web.Controllers
 {
-    //[AbpMvcAuthorize]
     public class HomeController : WebUiControllerBase
     {
         public ActionResult Index()

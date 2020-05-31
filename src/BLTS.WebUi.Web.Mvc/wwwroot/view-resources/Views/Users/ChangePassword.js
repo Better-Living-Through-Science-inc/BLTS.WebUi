@@ -5,12 +5,12 @@
 
     $.validator.addMethod("regex", function (value, element, regexpr) {
         return regexpr.test(value);
-    }, l("PasswordsMustBeAtLeast8CharactersContainLowercaseUppercaseNumber"));
+    }, l("PasswordsMustBeAtLeast12CharactersContainLowercaseUppercaseNumber"));
 
     _$form.validate({
         rules: {
             NewPassword: {
-                regex: /(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)[0-9a-zA-Z!@#$%^&*()]*$/
+                regex: /(?=^.{12,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)[0-9a-zA-Z!@#$%^&*()]*$/
             },
             ConfirmNewPassword: {
                 equalTo: "#NewPassword"

@@ -77,6 +77,7 @@ namespace BLTS.WebUi.Web.Startup
       else
       {
         app.UseExceptionHandler("/Error");
+        app.UseStatusCodePagesWithRedirects("/Error?code={0}");
         app.UseHsts();
       }
 
@@ -91,8 +92,6 @@ namespace BLTS.WebUi.Web.Startup
       app.UseJwtTokenMiddleware();
 
       app.UseAuthorization();
-
-      app.UseStatusCodePagesWithRedirects("/Error?code={0}");
 
       app.UseEndpoints(endpoints =>
       {

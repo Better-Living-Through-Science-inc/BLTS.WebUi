@@ -1,11 +1,14 @@
 ﻿@using BLTS.WebUi
-<footer class="main-footer">
-    <strong>Copyright &copy; @DateTime.Now.Year <a href="javascript:void(0);">Better Living Through Science, inc.</a></strong> All rights reserved.
-    <br />
+  <footer class="main-footer">
+    <ul class="FooterSocialLinks">
+      <li class="LogoFacebook"><a href="https://www.facebook.com/BetterLivingThroughScience/">Better Living Through Science Facebook</a></li>
+      <li class="LogoYouTube"><a href="https://www.youtube.com/c/MatthewCrawford">Better Living Through Science YouTube</a></li>
+      <li class="LogoTwitter"><a href="https://twitter.com/Tron1978">Better Living Through Science Twitter</a></li>
+      <li class="LogoLinkedIn"><a href="https://www.linkedin.com/company/betterlivingthroughscience/">Better Living Through Science LinkedIn</a></li>
+    </ul>
+    <strong>Copyright &copy; @DateTime.Now.Year <a href="javascript:void(0);">Better Living Through Science, inc.</a></strong> All rights reserved.<br />
     Better Living Through Science, Inc. is a registered US 501(c)(3) non-profit charity.<br />
-    Better Living Through Science is a proud supporter of the <a href="https://opensource.org/community">Open Source</a> community.<br />
-    BLTS research is licensed under <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>.<br />
     @*<div class="float-right d-none d-sm-inline-block">
-            <b>@L("Version")</b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]
-        </div>*@
-</footer>
+        <b>@L("Version")</b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]
+    </div>*@
+  </footer>

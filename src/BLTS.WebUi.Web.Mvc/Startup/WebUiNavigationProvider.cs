@@ -13,7 +13,7 @@ namespace BLTS.WebUi.Web.Startup
     public override void SetNavigation(INavigationProviderContext context)
     {
       context.Manager.MainMenu
-          .AddItem(new MenuItemDefinition(name: PageNames.Home,
+          .AddItem(new MenuItemDefinition(name: "Home",
                                           displayName: new FixedLocalizableString("Home Page"),
                                           url: "",
                                           icon: "fas fa-home",
@@ -29,28 +29,28 @@ namespace BLTS.WebUi.Web.Startup
                                           requiresAuthentication: true,
                                           order: 2
                                           )
-                                          .AddItem(new MenuItemDefinition(name: "Profile",
-                                                                          displayName: new FixedLocalizableString("Profile"),
-                                                                          url: "User/Profile",
-                                                                          icon: "fas fa-user",
+                                          .AddItem(new MenuItemDefinition(name: "CampusInfo",
+                                                                          displayName: new FixedLocalizableString("Campus Information"),
+                                                                          url: "About/CampusInfo",
+                                                                          icon: "fas fa-wifi",
                                                                           requiresAuthentication: true,
                                                                           order: 1
                                                                           )
                                           )
-                                          .AddItem(new MenuItemDefinition(name: "WorkPlaceInfo",
-                                                                          displayName: new FixedLocalizableString("Work Place Info"),
-                                                                          url: "About/WorkPlaceInfo",
-                                                                          icon: "fas fa-wifi",
+                                          .AddItem(new MenuItemDefinition(name: "CampusMap",
+                                                                          displayName: new FixedLocalizableString("Campus Map"),
+                                                                          url: "About/CampusMap",
+                                                                          icon: "fas fa-map-marked-alt",
                                                                           requiresAuthentication: true,
                                                                           order: 2
                                                                           )
                                           )
-                                          .AddItem(new MenuItemDefinition(name: "WorkPlaceMap",
-                                                                          displayName: new FixedLocalizableString("Building Map"),
-                                                                          url: "About/WorkPlaceMap",
-                                                                          icon: "fas fa-map-marked-alt",
+                                          .AddItem(new MenuItemDefinition(name: "ChangePassword",
+                                                                          displayName: new FixedLocalizableString("Change Password"),
+                                                                          url: "Users/ChangePassword",
+                                                                          icon: "fas fa-key",
                                                                           requiresAuthentication: true,
-                                                                          order: 2
+                                                                          order: 3
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Logout",
@@ -58,7 +58,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Account/Logout",
                                                                           icon: "fas fa-sign-out-alt",
                                                                           requiresAuthentication: true,
-                                                                          order: 3
+                                                                          order: 4
                                                                           )
                                           )
           )
@@ -71,7 +71,7 @@ namespace BLTS.WebUi.Web.Startup
                                           permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Users),
                                           order: 3
                                           )
-                                          .AddItem(new MenuItemDefinition(PageNames.Users,
+                                          .AddItem(new MenuItemDefinition("Users",
                                                                           displayName: new FixedLocalizableString("Users"),
                                                                           url: "Users",
                                                                           icon: "fas fa-users",
@@ -79,7 +79,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           order: 1
                                                                           )
                                           )
-                                          .AddItem(new MenuItemDefinition(PageNames.Roles,
+                                          .AddItem(new MenuItemDefinition("Roles",
                                                                           displayName: new FixedLocalizableString("Roles"),
                                                                           url: "Roles",
                                                                           icon: "fas fa-theater-masks",
@@ -87,7 +87,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           order: 2
                                                                           )
                                           )
-                                          .AddItem(new MenuItemDefinition(PageNames.Tenants,
+                                          .AddItem(new MenuItemDefinition("Tenants",
                                                                           displayName: new FixedLocalizableString("Tenants"),
                                                                           url: "Tenants",
                                                                           icon: "fas fa-building",
@@ -105,12 +105,20 @@ namespace BLTS.WebUi.Web.Startup
                                           requiresAuthentication: false,
                                           order: 4
                                           )
+                                          .AddItem(new MenuItemDefinition(name: "ResearchPhilosophy",
+                                                                          displayName: new FixedLocalizableString("Research Philosophy"),
+                                                                          url: "Research",
+                                                                          icon: "fas fa-star",
+                                                                          requiresAuthentication: false,
+                                                                          order: 1
+                                                                          )
+                                          )
                                           .AddItem(new MenuItemDefinition(name: "AtomicManufacturing",
                                                                           displayName: new FixedLocalizableString("Atomic Manufacturing"),
                                                                           url: "Research/Atomic",
                                                                           icon: "fas fa-atom",
                                                                           requiresAuthentication: false,
-                                                                          order: 1
+                                                                          order: 2
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Biophysics",
@@ -118,7 +126,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Research/Biophysics",
                                                                           icon: "fas fa-dna",
                                                                           requiresAuthentication: false,
-                                                                          order: 2
+                                                                          order: 3
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "HardwareEngineering",
@@ -126,7 +134,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Research/Hardware",
                                                                           icon: "fas fa-microchip",
                                                                           requiresAuthentication: false,
-                                                                          order: 3
+                                                                          order: 4
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Neurophysics",
@@ -134,7 +142,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Research/Neurophysics",
                                                                           icon: "fas fa-brain",
                                                                           requiresAuthentication: false,
-                                                                          order: 4
+                                                                          order: 5
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "SoftwareEngineering",
@@ -142,25 +150,33 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Research/Software",
                                                                           icon: "fas fa-hat-wizard",
                                                                           requiresAuthentication: false,
-                                                                          order: 5
+                                                                          order: 6
                                                                           )
                                           )
           )
       #endregion
 
       #region OutreachPrograms
-          .AddItem(new MenuItemDefinition(name: "Outreach",
-                                          displayName: new FixedLocalizableString("Outreach Programs"),
+          .AddItem(new MenuItemDefinition(name: "CommunityOutreach",
+                                          displayName: new FixedLocalizableString("Community Outreach"),
                                           icon: "fas fa-hand-holding-heart",
                                           requiresAuthentication: false,
                                           order: 5
+                                          )
+                                          .AddItem(new MenuItemDefinition(name: "OutreachPhilosophy",
+                                                                          displayName: new FixedLocalizableString("Outreach Philosophy"),
+                                                                          url: "Outreach",
+                                                                          icon: "fas fa-heart",
+                                                                          requiresAuthentication: false,
+                                                                          order: 1
+                                                                          )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "AfterSchoolPrograms",
                                                                           displayName: new FixedLocalizableString("After School Programs"),
                                                                           url: "Outreach/AfterSchool",
                                                                           icon: "fas fa-theater-masks",
                                                                           requiresAuthentication: false,
-                                                                          order: 1
+                                                                          order: 2
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "EducationalFacilities",
@@ -168,7 +184,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Outreach/EducationalFacility",
                                                                           icon: "fas fa-school",
                                                                           requiresAuthentication: false,
-                                                                          order: 2
+                                                                          order: 3
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "EducationalSupplies",
@@ -176,7 +192,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Outreach/EducationalSupply",
                                                                           icon: "fas fa-book-reader",
                                                                           requiresAuthentication: false,
-                                                                          order: 3
+                                                                          order: 4
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "StudentLunchProgram",
@@ -184,7 +200,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Outreach/StudentLunch",
                                                                           icon: "fas fa-utensils",
                                                                           requiresAuthentication: false,
-                                                                          order: 4
+                                                                          order: 5
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "TeacherRecruitment",
@@ -192,7 +208,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Outreach/TeacherRecruitment",
                                                                           icon: "fas fa-chalkboard-teacher",
                                                                           requiresAuthentication: false,
-                                                                          order: 5
+                                                                          order: 6
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "VaccineProgram",
@@ -200,25 +216,33 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "Outreach/Vaccine",
                                                                           icon: "fas fa-syringe",
                                                                           requiresAuthentication: false,
-                                                                          order: 6
+                                                                          order: 7
                                                                           )
                                           )
           )
       #endregion
 
       #region About
-          .AddItem(new MenuItemDefinition(name: "About",
-                                          displayName: new FixedLocalizableString("About"),
+          .AddItem(new MenuItemDefinition(name: "Information",
+                                          displayName: new FixedLocalizableString("Information"),
                                           icon: "fas fa-info-circle",
                                           requiresAuthentication: false,
                                           order: 6
+                                          )
+                                          .AddItem(new MenuItemDefinition(name: "About",
+                                                                          displayName: new FixedLocalizableString("About"),
+                                                                          url: "About",
+                                                                          icon: "fas fa-question-circle",
+                                                                          requiresAuthentication: false,
+                                                                          order: 1
+                                                                          )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Budget",
                                                                           displayName: new FixedLocalizableString("Budget"),
                                                                           url: "About/Budget",
                                                                           icon: "fas fa-file-invoice-dollar",
                                                                           requiresAuthentication: false,
-                                                                          order: 1
+                                                                          order: 2
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Contact",
@@ -226,7 +250,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "About/Contact",
                                                                           icon: "fas fa-address-card",
                                                                           requiresAuthentication: false,
-                                                                          order: 2
+                                                                          order: 3
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "CoreValues",
@@ -234,7 +258,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "About/CoreValues",
                                                                           icon: "fas fa-star",
                                                                           requiresAuthentication: false,
-                                                                          order: 3
+                                                                          order: 4
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "EmployeeRecruitment",
@@ -242,7 +266,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "About/EmployeeRecruitment",
                                                                           icon: "fas fa-pizza-slice",
                                                                           requiresAuthentication: false,
-                                                                          order: 4
+                                                                          order: 5
                                                                           )
                                           )
                                           .AddItem(new MenuItemDefinition(name: "Organization",
@@ -250,7 +274,7 @@ namespace BLTS.WebUi.Web.Startup
                                                                           url: "About/Organization",
                                                                           icon: "fas fa-sitemap",
                                                                           requiresAuthentication: false,
-                                                                          order: 5
+                                                                          order: 6
                                                                           )
                                           )
           )

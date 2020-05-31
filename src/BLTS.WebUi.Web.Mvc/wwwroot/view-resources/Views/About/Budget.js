@@ -8,18 +8,18 @@
      */
 
     //-----------------------
-    //- MONTHLY SALES CHART -
+    //- MONTHLY finace CHART -
     //-----------------------
 
     // Get context with jQuery - using jQuery's .get() method.
-    var salesChartCanvas = $('#salesChart').get(0).getContext('2d');
+    var finaceChartCanvas = $('#finaceChart').get(0).getContext('2d');
     // This will get the first returned node in the jQuery collection.
 
-    var salesChartData = {
+    var finaceChartData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [
             {
-                label: 'Science',
+                label: 'Donations',
                 fill: '#dee2e6',
                 borderColor: '#ced4da',
                 pointBackgroundColor: '#ced4da',
@@ -27,10 +27,10 @@
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgb(220,220,220)',
                 spanGaps: true,
-                data: [90, 95, 92, 93, 89, 94, 92, 93, 95, 94, 89, 90]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             },
             {
-                label: 'History',
+                label: 'Sales',
                 fill: 'rgba(0, 123, 255, 0.9)',
                 borderColor: 'rgba(0, 123, 255, 1)',
                 pointBackgroundColor: '#3b8bba',
@@ -38,12 +38,12 @@
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgba(0, 123, 255, 1)',
                 spanGaps: true,
-                data: [93, 92, 93, 92, 93, 95, 95, 94, 92, 89, 88, 92]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             }
         ]
     };
 
-    var salesChartOptions = {
+    var finaceChartOptions = {
         //Boolean - If we should show the scale at all
         showScale: true,
         //Boolean - Whether grid lines are shown across the chart
@@ -83,10 +83,10 @@
     };
 
     //Create the line chart
-    var salesChart = new Chart(salesChartCanvas, {
+    var finaceChart = new Chart(finaceChartCanvas, {
         type: 'line',
-        data: salesChartData,
-        options: salesChartOptions
+        data: finaceChartData,
+        options: finaceChartOptions
     });
 
     //---------------------------
