@@ -1,24 +1,13 @@
 ﻿@using BLTS.WebUi.Web.Startup
 @{ ViewBag.CurrentPageName = "Home";
-        ViewBag.Title = "Home Page"; }
-@section scripts
-{
-  <environment names="Development">
-    <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
-    <script src="~/view-resources/Views/Home/Index.js" asp-append-version="true"></script>
-  </environment>
+  ViewBag.Title = ""; }
 
-  <environment names="Staging,Production">
-    <script src="~/view-resources/Views/_Bundles/home-index.min.js" asp-append-version="true"></script>
-  </environment>
-}
 <div class="content-header">
   <div class="container-fluid">
-    <div class="row mb-2">
-      <div class="col-sm-12">
-        <h1 class="m-0 text-dark">@L("HomePage")</h1>
-      </div>
-    </div>
+    @*<div class="row mb-2">
+        <div class="col-sm-12">
+        </div>
+      </div>*@
   </div>
 </div>
 <div class="content">
@@ -27,10 +16,24 @@
       <div class="col-lg-12">
         <div class="card">
           <div class="card-body">
-            <h3>Welcome to Better Living Through Science</h3>
-
+            <h3>Nonprofit scientific research for the benefit of humanity</h3>
             <p>
-              Dedicated to helping humanity through scientific research and education
+              The primary objective of Better Living Through Science  is to help humanity through scientific research and education. BLTS believes that scientific research and education are of primary importance in permanently raising families and communities out of poverty as well as improving the health and happiness of all humans. BLTS also believes that research knowledge should be shared freely for the benefit of all humanity.<br />
+            </p>
+
+            <h3>Version 1 of BLTS Website is Online</h3>
+            <p>
+              First revision of the BLTS website is now online. Much work remains but minimally the site is now live :)
+            </p>
+
+            <h3>Registration in Thailand beggins</h3>
+            <p>
+              The process of registration in Thailand has begun.
+            </p>
+
+            <h3>Better Living Through Science, Inc. 501(c)(3)</h3>
+            <p>
+              2017-Oct-11 - US registration is complete.
             </p>
 
           </div>
