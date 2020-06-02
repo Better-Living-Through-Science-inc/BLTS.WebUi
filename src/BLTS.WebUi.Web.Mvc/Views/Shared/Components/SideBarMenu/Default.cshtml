@@ -5,12 +5,11 @@
 }
 
 <nav class="mt-2">
-    <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
-        @{
-            foreach (var item in orderedMenuItems)
-            {
-                @await Html.PartialAsync("Components/SideBarMenu/_MenuItem", item)
-            }
-        }
-    </ul>
+  <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+  @{foreach (var item in orderedMenuItems)
+    {
+      @await Html.PartialAsync("Components/SideBarMenu/_MenuItem", item)
+    }
+  }
+  </ul>
 </nav>

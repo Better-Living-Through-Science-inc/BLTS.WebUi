@@ -2,24 +2,27 @@
 
 namespace BLTS.WebUi.Web.Views.Shared.Components.SideBarUserArea
 {
-    public class SideBarUserAreaViewModel
+  public class SideBarUserAreaViewModel
+  {
+    public GetCurrentLoginInformationsOutput LoginInformations { get; set; }
+
+    public bool IsMultiTenancyEnabled { get; set; }
+
+    public string GetShownLoginName()
     {
-        public GetCurrentLoginInformationsOutput LoginInformations { get; set; }
+      string userName = IsUserLoggedIn() ? LoginInformations.User.Surname + ", " + LoginInformations.User.Name : "Guest";
 
-        public bool IsMultiTenancyEnabled { get; set; }
-
-        public string GetShownLoginName()
-        {
-            string userName = LoginInformations.User != null ? LoginInformations.User.UserName : "Guest";
-
-            if (!IsMultiTenancyEnabled)
-            {
-                return userName;
-            }
-
-            return LoginInformations.Tenant == null
-                ? userName
-                : LoginInformations.Tenant.TenancyName + " - " + userName;
-        }
+      if (!IsMultiTenancyEnabled)
+        return userName;
+      else
+        return LoginInformations.Tenant == null
+            ? userName
+            : LoginInformations.Tenant.TenancyName + " - " + userName;
     }
+
+    public bool IsUserLoggedIn()
+    {
+      return LoginInformations.User != null;
+    }
+  }
 }

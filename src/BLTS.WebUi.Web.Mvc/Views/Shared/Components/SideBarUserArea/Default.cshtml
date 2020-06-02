@@ -1,11 +1,17 @@
 ﻿@using BLTS.WebUi.Web.Views.Shared.Components.SideBarUserArea
 @model SideBarUserAreaViewModel
 
-<div class="user-panel mt-3 pb-3 mb-3 d-flex">
-    <div class="image">
-        <img src="~/libs/admin-lte/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
-    </div>
-    <div class="info">
-        <a class="d-block" href="javascript:void(0);">@Html.Raw(Model.GetShownLoginName())</a>
-    </div>
+<div class="user-panel mt-2 pb-2 mb-2 d-flex">
+  <div class="info">
+@{if (Model.IsUserLoggedIn())
+  {
+    <a class="d-block" href="javascript:void(0);">@Html.Raw(Model.GetShownLoginName())</a>                  
+    <a href="/Account/Logout"><i class="nav-icon fas fa-sign-out-alt"></i> Logout</a>
+  }
+  else
+  {
+    <a href="/Account/Login" class="nav-link "><i class="nav-icon fas fa-sign-in-alt"></i> Login</a>
+  };
+  }
+  </div>
 </div>

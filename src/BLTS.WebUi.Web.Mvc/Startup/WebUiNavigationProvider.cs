@@ -53,14 +53,6 @@ namespace BLTS.WebUi.Web.Startup
                                                                           order: 3
                                                                           )
                                           )
-                                          .AddItem(new MenuItemDefinition(name: "Logout",
-                                                                          displayName: new FixedLocalizableString("Logout"),
-                                                                          url: "Account/Logout",
-                                                                          icon: "fas fa-sign-out-alt",
-                                                                          requiresAuthentication: true,
-                                                                          order: 4
-                                                                          )
-                                          )
           )
       #endregion
 
