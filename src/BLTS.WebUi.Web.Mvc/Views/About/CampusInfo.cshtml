@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="m-0 text-dark">Campus Information</h1>
+        <h1 class="m-0 text-dark">@ViewBag.Title</h1>
       </div>
     </div>
   </div>
@@ -13,12 +13,18 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-md-6">
         <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Technology</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
           <div class="card-body">
-
-            <h3>WiFi</h3>
-
+            <h4>WiFi</h4>
             <p>
               SSID: BltsEmployee<br />
               Password: 10LifeIsGood01<br />
@@ -26,9 +32,21 @@
               Guest WiFi Access is provided on the SSID: BltsGuest and does not require a password.<br />
               Please do not disclose the internal password to guests.<br />
             </p>
-
-            <h3>Cafeteria Hours</h3>
-
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Facilities</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h4>Cafeteria Hours</h4>
             <p>
               <ul>
                 <li>Morning: 7:00-9:00</li>
@@ -37,19 +55,44 @@
                 <li>Night: 23:00-1:00</li>
               </ul>
             </p>
-
-            <h3>Safety and Health</h3>
-
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Safety and Health</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h4>Safety and Health</h4>
             <p>
               Safety and Health information<br />
             </p>
-
-            <h3>Fraud Waste &amp; Abuse (FWA)</h3>
-
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Fraud Waste &amp; Abuse (FWA)</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h4>Fraud Waste &amp; Abuse (FWA)</h4>
             <p>
               Fraud Waste and Abuse information<br />
             </p>
-
           </div>
         </div>
       </div>
