@@ -79,7 +79,7 @@ body {
   background-repeat: repeat-x;
   background-position: left -110px;
   background-size: 140px;
-  height: 15px;
+  height: 30px;
   border-top-width: 1px;
   border-top-style: groove;
   border-top-color: #000;
@@ -109,7 +109,7 @@ body {
   .LogoLine3 {
     background-position: left -110px;
     background-size: 140px;
-    height: 15px;
+    height: 30px;
     display: block;
   }
 }
@@ -132,7 +132,7 @@ body {
   .LogoLine3 {
     background-position: left -110px;
     background-size: 140px;
-    height: 15px;
+    height: 30px;
   }
 }
 
@@ -154,7 +154,7 @@ body {
   .LogoLine3 {
     background-position: left -110px;
     background-size: 140px;
-    height: 15px;
+    height: 30px;
   }
 }
 
@@ -176,7 +176,7 @@ body {
   .LogoLine3 {
     background-position: left -110px;
     background-size: 140px;
-    height: 15px;
+    height: 30px;
   }
 }
 
