@@ -40,15 +40,14 @@ body {
   border: none;
   padding-top: 0px;
   padding-bottom: 0px;
-  height: 100px;
   line-height: initial;
 }
 
 .LogoLine1 {
   background-image: url(/img/BluLight160.png);
   background-repeat: repeat-x;
-  background-position: left -10px;
-  background-size: 93px;
+  background-position: left -5px;
+  background-size: 80px;
   height: 15px;
   border-bottom-width: 1px;
   border-bottom-style: ridge;
@@ -57,24 +56,29 @@ body {
 
 .LogoLine2 {
   background-image: url(/img/Shelfwhite.png);
-  background-size: 280px;
+  background-size: 240px;
   background-repeat: repeat-y;
   background-position: center center;
   vertical-align: middle;
-  height: 70px;
 }
 
-  .LogoLine2 a {
+  .LogoLine2 .Logo-link {
     color: #eee;
-    font-size: 1rem;
+    font-size: .8rem;
     vertical-align: middle;
+    display: block;
   }
+
+    .LogoLine2 .Logo-link .Logo-link-image {
+      height: 70px;
+      vertical-align: middle;
+    }
 
 .LogoLine3 {
   background-image: url(/img/BluLight160.png);
   background-repeat: repeat-x;
-  background-position: left -70px;
-  background-size: 93px;
+  background-position: left -60px;
+  background-size: 80px;
   height: 30px;
   border-top-width: 1px;
   border-top-style: groove;
@@ -82,97 +86,211 @@ body {
 }
 
 
-@media (min-width: 576px) {
+@media (max-width: 300px) {
   .LogoLine2 .Logo-link {
-    font-size: 1.5rem;
+    font-size: .7rem;
   }
+}
 
+@media (max-width: 450px) {
+  .pushmenu {
+    padding-right: 0px !important;
+  }
+}
+
+@media (min-width: 360px) {
   .LogoLine1 {
-    background-position: left -20px;
-    background-size: 140px;
-    height: 15px;
-    display: block;
+    background-position: left -10px;
+    background-size: 93px;
   }
 
   .LogoLine2 {
-    background-size: 500px;
+    background-size: 280px;
   }
 
-    .LogoLine2 a img {
-      display: inline;
+    .LogoLine2 .Logo-link {
+      font-size: 1rem;
     }
 
   .LogoLine3 {
-    background-position: left -110px;
-    background-size: 140px;
-    height: 30px;
+    background-position: left -70px;
+    background-size: 93px;
+  }
+
+  .rightNavPadding {
+    height: 1px;
+    width: 10px;
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .LogoLine1 {
+    background-position: left -20px;
+    background-size: 126px;
+  }
+
+  .LogoLine2 {
+    background-size: 380px;
+  }
+
+    .LogoLine2 .Logo-link {
+      font-size: 1.5rem;
+    }
+
+  .LogoLine3 {
+    background-position: left -100px;
+    background-size: 126px;
+  }
+
+  .rightNavPadding {
+    height: 1px;
+    width: 46px;
     display: block;
   }
 }
 
 @media (min-width: 768px) {
-  .LogoLine2 .Logo-link {
-    font-size: 2rem;
-  }
-
   .LogoLine1 {
     background-position: left -20px;
-    background-size: 140px;
-    height: 15px;
+    background-size: 134px;
   }
 
   .LogoLine2 {
-    background-size: 680px;
+    background-size: 535px;
   }
+
+    .LogoLine2 .Logo-link {
+      font-size: 2.3rem;
+    }
 
   .LogoLine3 {
     background-position: left -110px;
-    background-size: 140px;
-    height: 30px;
+    background-size: 134px;
   }
 }
 
 @media (min-width: 992px) {
-  .LogoLine2 .Logo-link {
-    font-size: 2rem;
-  }
-
   .LogoLine1 {
     background-position: left -20px;
-    background-size: 140px;
-    height: 15px;
+    background-size: 149px;
   }
 
   .LogoLine2 {
-    background-size: 680px;
+    background-size: 597px;
   }
 
+    .LogoLine2 .Logo-link {
+      font-size: 2.6rem;
+    }
+
   .LogoLine3 {
-    background-position: left -110px;
-    background-size: 140px;
-    height: 30px;
+    background-position: left -120px;
+    background-size: 149px;
   }
 }
 
 @media (min-width: 1200px) {
-  .LogoLine2 .Logo-link {
-    font-size: 3rem;
-  }
-
   .LogoLine1 {
     background-position: left -20px;
-    background-size: 140px;
-    height: 15px;
+    background-size: 155px;
   }
 
   .LogoLine2 {
-    background-size: 680px;
+    background-size: 776px;
   }
 
+    .LogoLine2 .Logo-link {
+      font-size: 3.5rem;
+    }
+
+      .LogoLine2 .Logo-link .Logo-link-image {
+        vertical-align: top;
+      }
+
   .LogoLine3 {
-    background-position: left -110px;
-    background-size: 140px;
-    height: 30px;
+    background-position: left -125px;
+    background-size: 155px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .LogoLine1 {
+    background-position: left -20px;
+    background-size: 178px;
+  }
+
+  .LogoLine2 {
+    background-size: 890px;
+  }
+
+    .LogoLine2 .Logo-link {
+      font-size: 4rem;
+    }
+
+      .LogoLine2 .Logo-link .Logo-link-image {
+        height: 83px;
+      }
+
+  .LogoLine3 {
+    background-position: left -150px;
+    background-size: 178px;
+  }
+
+  .pushmenu {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .LogoLine1 {
+    background-position: left -20px;
+    background-size: 169px;
+  }
+
+  .LogoLine2 {
+    background-size: 1352px;
+  }
+
+    .LogoLine2 .Logo-link {
+      font-size: 6rem;
+    }
+
+      .LogoLine2 .Logo-link .Logo-link-image {
+        height: 140px;
+      }
+
+  .LogoLine3 {
+    background-position: left -140px;
+    background-size: 169px;
+  }
+
+  .pushmenu {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 5000px) {
+  .LogoLine1 {
+    background-position: left -20px;
+    background-size: 169px;
+  }
+
+  .LogoLine2 {
+    background-size: 2216px;
+  }
+
+    .LogoLine2 .Logo-link {
+      font-size: 10rem;
+    }
+
+      .LogoLine2 .Logo-link .Logo-link-image {
+        height: 200px;
+      }
+
+  .LogoLine3 {
+    background-position: left -140px;
+    background-size: 169px;
   }
 }
 
@@ -230,6 +348,12 @@ body {
   background-color: #fff;
 }
 
+/*.glassPanel, .glassPanel-white, .modal-content, .card, .content-header h1 {
+}
+.glassPanel-white {
+  background-color: #fff;
+}
+*/
 /*Footer*/
 .main-footer {
   background: none;
