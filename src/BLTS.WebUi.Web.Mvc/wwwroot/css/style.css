@@ -47,17 +47,17 @@ body {
 .LogoLine1 {
   background-image: url(/img/BluLight160.png);
   background-repeat: repeat-x;
-  background-position: left -20px;
-  background-size: 140px;
+  background-position: left -10px;
+  background-size: 93px;
   height: 15px;
   border-bottom-width: 1px;
   border-bottom-style: ridge;
   border-bottom-color: #000;
-  display: none;
 }
 
 .LogoLine2 {
   background-image: url(/img/Shelfwhite.png);
+  background-size: 280px;
   background-repeat: repeat-y;
   background-position: center center;
   vertical-align: middle;
@@ -70,20 +70,15 @@ body {
     vertical-align: middle;
   }
 
-  .LogoLine2 a img{
-    display: none;
-  }
-
 .LogoLine3 {
   background-image: url(/img/BluLight160.png);
   background-repeat: repeat-x;
-  background-position: left -110px;
-  background-size: 140px;
+  background-position: left -70px;
+  background-size: 93px;
   height: 30px;
   border-top-width: 1px;
   border-top-style: groove;
   border-top-color: #000;
-  display: none;
 }
 
 
@@ -102,6 +97,7 @@ body {
   .LogoLine2 {
     background-size: 500px;
   }
+
     .LogoLine2 a img {
       display: inline;
     }
@@ -180,16 +176,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .content-wrapper {
   background-color: #400;
   background-repeat: repeat-x;
@@ -250,29 +236,37 @@ body {
   border: none;
 }
 
-.LogoFacebook a, .LogoYouTube a, .LogoTwitter a, .LogoLinkedIn a {
+.LogoFacebook a, .LogoGitHub a, .LogoGuideStar a, .LogoLinkedIn a, .LogoTwitter a, .LogoYouTube a {
   background-image: url(/img/social-icon.png);
-  background-size: 90px 90px;
+  background-size: 150px 100px;
   background-repeat: no-repeat;
   display: block;
   color: Transparent;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
 }
 
-.LogoFacebook, .LogoFacebook a {
+.LogoFacebook a {
+  background-position: -100px 0px;
+}
+
+.LogoGitHub a {
+  background-position: 0px -50px;
+}
+
+.LogoGuideStar a {
+  background-position: -50px -50px;
+}
+
+.LogoLinkedIn a {
+  background-position: -50px 0px;
+}
+
+.LogoTwitter a {
+  background-position: -100px -50px;
+}
+
+.LogoYouTube a {
   background-position: 0px 0px;
-}
-
-.LogoYouTube, .LogoYouTube a {
-  background-position: 0px -45px;
-}
-
-.LogoTwitter, .LogoTwitter a {
-  background-position: -45px 0px;
-}
-
-.LogoLinkedIn, .LogoLinkedIn a {
-  background-position: -45px -45px;
 }
