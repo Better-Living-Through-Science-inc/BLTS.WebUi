@@ -1,16 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Abp.Authorization.Users;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace BLTS.WebUi.Models.TokenAuth
 {
     public class ExternalAuthenticateModel
     {
         [Required]
-        [StringLength(UserLogin.MaxLoginProviderLength)]
         public string AuthProvider { get; set; }
 
         [Required]
-        [StringLength(UserLogin.MaxProviderKeyLength)]
         public string ProviderKey { get; set; }
 
         [Required]

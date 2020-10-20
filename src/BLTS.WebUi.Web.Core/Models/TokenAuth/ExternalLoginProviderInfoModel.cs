@@ -1,9 +1,9 @@
-﻿using Abp.AutoMapper;
-using BLTS.WebUi.Authentication.External;
+﻿
+using AutoMapper;
 
 namespace BLTS.WebUi.Models.TokenAuth
 {
-    [AutoMapFrom(typeof(ExternalLoginProviderInfo))]
+    //[AutoMap(typeof(ExternalLoginProviderInfo))]
     public class ExternalLoginProviderInfoModel
     {
         public string Name { get; set; }

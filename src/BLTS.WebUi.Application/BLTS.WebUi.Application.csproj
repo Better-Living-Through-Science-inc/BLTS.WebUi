@@ -10,7 +10,4 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <RootNamespace>BLTS.WebUi</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLTS.WebUi.Core\BLTS.WebUi.Core.csproj" />
-  </ItemGroup>
 </Project>

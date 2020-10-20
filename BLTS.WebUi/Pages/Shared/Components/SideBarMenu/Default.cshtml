@@ -1,0 +1,192 @@
+﻿@using BLTS.WebUi.Pages.Shared.Components.SideBarMenu
+@model SideBarMenuViewModel
+@{ 
+//var orderedMenuItems = Model.MainMenu.Items.Where(x => x.IsVisible).OrderByCustom().ToList();
+}
+
+<nav class="mt-2">
+  <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+    @*@{foreach (var item in orderedMenuItems)
+      {
+        @await Html.PartialAsync("Components/SideBarMenu/_MenuItem", item)
+      }
+    }*@
+
+      <li class="nav-item">
+        <a href="/" class="nav-link active">
+
+          <i class="nav-icon fas fa-home"></i>
+          <p>Home Page</p>
+        </a>
+      </li>
+      <li class="nav-item has-treeview ">
+        <a href="javascript:;" class="nav-link ">
+
+          <i class="nav-icon fas fa-book"></i>
+          <p>
+            Research Initiative
+            <i class="fas fa-angle-left right"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="/Research" class="nav-link ">
+
+              <i class="nav-icon fas fa-star"></i>
+              <p>Research Philosophy</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Research/Atomic" class="nav-link ">
+
+              <i class="nav-icon fas fa-atom"></i>
+              <p>Atomic Manufacturing</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Research/Biophysics" class="nav-link ">
+
+              <i class="nav-icon fas fa-dna"></i>
+              <p>Biophysics</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Research/Hardware" class="nav-link ">
+
+              <i class="nav-icon fas fa-microchip"></i>
+              <p>Hardware Engineering</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Research/Neurophysics" class="nav-link ">
+
+              <i class="nav-icon fas fa-brain"></i>
+              <p>Neurophysics</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Research/Software" class="nav-link ">
+
+              <i class="nav-icon fas fa-hat-wizard"></i>
+              <p>Software Engineering</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item has-treeview ">
+        <a href="javascript:;" class="nav-link ">
+
+          <i class="nav-icon fas fa-hand-holding-heart"></i>
+          <p>
+            Community Outreach
+            <i class="fas fa-angle-left right"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="/Outreach" class="nav-link ">
+
+              <i class="nav-icon fas fa-heart"></i>
+              <p>Outreach Philosophy</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/AfterSchool" class="nav-link ">
+
+              <i class="nav-icon fas fa-theater-masks"></i>
+              <p>After School Programs</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/EducationalFacility" class="nav-link ">
+
+              <i class="nav-icon fas fa-school"></i>
+              <p>Educational Facilities</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/EducationalSupply" class="nav-link ">
+
+              <i class="nav-icon fas fa-book-reader"></i>
+              <p>Educational Supplies</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/StudentLunch" class="nav-link ">
+
+              <i class="nav-icon fas fa-utensils"></i>
+              <p>Student Lunch Program</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/TeacherRecruitment" class="nav-link ">
+
+              <i class="nav-icon fas fa-chalkboard-teacher"></i>
+              <p>Teacher Recruitment</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Outreach/Vaccine" class="nav-link ">
+
+              <i class="nav-icon fas fa-syringe"></i>
+              <p>Vaccine Program</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item has-treeview ">
+        <a href="javascript:;" class="nav-link ">
+
+          <i class="nav-icon fas fa-info-circle"></i>
+          <p>
+            Information
+            <i class="fas fa-angle-left right"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="/About" class="nav-link ">
+
+              <i class="nav-icon fas fa-question-circle"></i>
+              <p>About</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/About/Budget" class="nav-link ">
+
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p>Budget</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/About/Contact" class="nav-link ">
+
+              <i class="nav-icon fas fa-address-card"></i>
+              <p>Contact</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/About/CoreValues" class="nav-link ">
+
+              <i class="nav-icon fas fa-star"></i>
+              <p>Core Values</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/About/EmployeeRecruitment" class="nav-link ">
+
+              <i class="nav-icon fas fa-pizza-slice"></i>
+              <p>Employee Recruitment</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/About/Organization" class="nav-link ">
+
+              <i class="nav-icon fas fa-sitemap"></i>
+              <p>Organization</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+  </ul>
+</nav>

@@ -1,0 +1,184 @@
+﻿@page
+
+@{ ViewBag.CurrentPageName = "Budget";
+  ViewBag.Title = "Budget"; }
+@section scripts
+{
+  <environment names="Development">
+    <script src="~/libs/chartjs/dist/Chart.js" asp-append-version="true"></script>
+    <script src="~/view-resources/Views/about/Budget.js" asp-append-version="true"></script>
+  </environment>
+
+  <environment names="Staging,Production">
+    <script src="~/view-resources/Views/_Bundles/about-budget.min.js" asp-append-version="true"></script>
+  </environment>
+}
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="m-0 text-dark">@ViewBag.Title</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Monthly Recap Report</h5>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-center">
+                  <strong>Income: 1 Jan, 2020 - 31 Dec, 2020</strong>
+                </p>
+                <div class="chart">
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <!-- Sales Chart Canvas -->
+                  <canvas id="finaceChart" height="360" style="height: 180px; display: block; width: 730px;" width="1460" class="chartjs-render-monitor"></canvas>
+                </div>
+                <!-- /.chart-responsive -->
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 0%</span>
+                  <h5 class="description-header">$0.00</h5>
+                  <span class="description-text">TOTAL REVENUE</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 0%</span>
+                  <h5 class="description-header">$0.00</h5>
+                  <span class="description-text">TOTAL DONATIONS</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 0%</span>
+                  <h5 class="description-header">$0.00</h5>
+                  <span class="description-text">TOTAL SALES</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block">
+                  <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 0%</span>
+                  <h5 class="description-header">$0.00</h5>
+                  <span class="description-text">TOTAL EXPENDITURES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h3 class="card-title">Latest Transactions</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table m-0">
+                <thead>
+                  <tr>
+                    <th>Transaction ID</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Value (USD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00015</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00014</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00013</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00012</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00011</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00010</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00009</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00008</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00007</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00006</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

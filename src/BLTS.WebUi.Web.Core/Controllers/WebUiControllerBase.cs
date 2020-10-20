@@ -1,19 +1,19 @@
-using Abp.AspNetCore.Mvc.Controllers;
-using Abp.IdentityFramework;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BLTS.WebUi.Controllers
 {
-    public abstract class WebUiControllerBase: AbpController
-    {
+    public abstract class WebUiControllerBase : Controller
+  {
+    public object LocalizationSourceName { get; }
         protected WebUiControllerBase()
         {
-            LocalizationSourceName = WebUiConsts.LocalizationSourceName;
+            LocalizationSourceName = "";
         }
 
-        protected void CheckErrors(IdentityResult identityResult)
+
+    protected void CheckErrors(IdentityResult identityResult)
         {
-            identityResult.CheckErrors(LocalizationManager);
         }
     }
 }

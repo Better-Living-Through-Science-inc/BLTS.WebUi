@@ -18,14 +18,16 @@
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLTS.WebUi.Application\BLTS.WebUi.Application.csproj" />
-    <ProjectReference Include="..\BLTS.WebUi.EntityFrameworkCore\BLTS.WebUi.EntityFrameworkCore.csproj" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.5" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
-    <PackageReference Include="Abp.AspNetCore" Version="5.8.0" />
-    <PackageReference Include="Abp.ZeroCore" Version="5.8.0" />
-    <PackageReference Include="Abp.AspNetCore.SignalR" Version="5.8.0" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Authorization\" />
   </ItemGroup>
 </Project>
