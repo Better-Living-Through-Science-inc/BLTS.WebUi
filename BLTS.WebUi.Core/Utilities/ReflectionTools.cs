@@ -302,14 +302,7 @@ namespace BLTS.WebUi.Utilities
             }
             catch
             {
-                try
-                {
-                    assembly = Assembly.LoadWithPartialName(assemblyName);//yes yes this is obsolete but it is only a backup call
-                }
-                catch (Exception currentException)
-                {
-                    throw new ArgumentException("Can't load assembly " + assemblyName);
-                }
+                throw new ArgumentException("Can't load assembly " + assemblyName);
             }
 
             // Get the handler
