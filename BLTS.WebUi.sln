@@ -11,15 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLTS.WebUi", "BLTS.WebUi\BLTS.WebUi.csproj", "{6BF2596E-B345-4F6A-B6FF-E78D9539FD9D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{967EB942-173E-44FD-A8DB-3C41B5C4B043} = {967EB942-173E-44FD-A8DB-3C41B5C4B043}
-		{5FBC7A59-31F4-4D3B-8E4D-DD1D41707E9A} = {5FBC7A59-31F4-4D3B-8E4D-DD1D41707E9A}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{ACA9D9EF-BBBF-448A-912C-ABB7416B8BB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Icons", "Icons", "{97FBD86C-AA8B-4A07-99F7-1B6CE6D982ED}"
+	ProjectSection(SolutionItems) = preProject
+		BLTS.WebUi.Blazor\wwwroot\favicon.ico = BLTS.WebUi.Blazor\wwwroot\favicon.ico
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{4C045B62-71EA-41A9-A0B4-FE927C078B5D}"
 EndProject
@@ -32,16 +29,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLTS.WebUi.Infrastructure",
 		{967EB942-173E-44FD-A8DB-3C41B5C4B043} = {967EB942-173E-44FD-A8DB-3C41B5C4B043}
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLTS.WebUi.Blazor", "BLTS.WebUi.Blazor\BLTS.WebUi.Blazor.csproj", "{F46449A5-6A0A-45BB-BF58-90F974C9CB88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SiteImages", "SiteImages", "{996B9025-AA4F-452D-A167-61C6301040D5}"
+	ProjectSection(SolutionItems) = preProject
+		Images\SiteImages\BackgroundTexture.png = Images\SiteImages\BackgroundTexture.png
+		Images\SiteImages\BLTS-Logo-Radiation.png = Images\SiteImages\BLTS-Logo-Radiation.png
+		Images\SiteImages\Blts-Web-Banner-and-logo.png = Images\SiteImages\Blts-Web-Banner-and-logo.png
+		Images\SiteImages\BluLight160.png = Images\SiteImages\BluLight160.png
+		Images\SiteImages\bodyGradient.gif = Images\SiteImages\bodyGradient.gif
+		Images\SiteImages\logo-glow.png = Images\SiteImages\logo-glow.png
+		Images\SiteImages\logo.png = Images\SiteImages\logo.png
+		Images\SiteImages\Menu-Background-Light.png = Images\SiteImages\Menu-Background-Light.png
+		Images\SiteImages\Menu-Background.png = Images\SiteImages\Menu-Background.png
+		Images\SiteImages\Shelf.png = Images\SiteImages\Shelf.png
+		Images\SiteImages\ShelfWhite.png = Images\SiteImages\ShelfWhite.png
+		Images\SiteImages\social-icon.png = Images\SiteImages\social-icon.png
+		Images\SiteImages\WhitLight160.png = Images\SiteImages\WhitLight160.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BF2596E-B345-4F6A-B6FF-E78D9539FD9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BF2596E-B345-4F6A-B6FF-E78D9539FD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BF2596E-B345-4F6A-B6FF-E78D9539FD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BF2596E-B345-4F6A-B6FF-E78D9539FD9D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{967EB942-173E-44FD-A8DB-3C41B5C4B043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{967EB942-173E-44FD-A8DB-3C41B5C4B043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{967EB942-173E-44FD-A8DB-3C41B5C4B043}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -50,6 +62,10 @@ Global
 		{5FBC7A59-31F4-4D3B-8E4D-DD1D41707E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FBC7A59-31F4-4D3B-8E4D-DD1D41707E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FBC7A59-31F4-4D3B-8E4D-DD1D41707E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46449A5-6A0A-45BB-BF58-90F974C9CB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46449A5-6A0A-45BB-BF58-90F974C9CB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46449A5-6A0A-45BB-BF58-90F974C9CB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46449A5-6A0A-45BB-BF58-90F974C9CB88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +73,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{97FBD86C-AA8B-4A07-99F7-1B6CE6D982ED} = {ACA9D9EF-BBBF-448A-912C-ABB7416B8BB9}
 		{4C045B62-71EA-41A9-A0B4-FE927C078B5D} = {ACA9D9EF-BBBF-448A-912C-ABB7416B8BB9}
+		{996B9025-AA4F-452D-A167-61C6301040D5} = {ACA9D9EF-BBBF-448A-912C-ABB7416B8BB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92C5ABCF-AE57-4A16-838F-1D0394217D10}

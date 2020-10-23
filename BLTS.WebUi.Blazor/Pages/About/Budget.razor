@@ -1,0 +1,261 @@
+﻿@page "/About/Budget"
+
+@code {
+  public string Title = "Budget";
+}
+<PageTitle Title=@Title />
+
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="m-0 text-dark">@Title</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Individual Donors</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>
+              <a href="http://www.linkedin.com/in/MJcrawford/" target="_blank">Matthew J Crawford</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/anuradha-nandi-28899417/" target="_blank">Anuradaha Nandi</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h2 class="card-title">Corporate Donors</h2>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="DonorLogo text-center">
+              <a title="GitHub for Good" href="https://github.com/nonprofit">
+                <img src="/img/Donor/GitHub-Logo.png" alt="GitHub Logo">
+                <span>GitHub for Good</span>
+              </a>
+            </div>
+            <div class="DonorLogo text-center">
+              <a title="Microsoft for Nonprofits" href="https://www.microsoft.com/en-us/nonprofits">
+                <img src="/img/Donor/Microsoft-Logo.png" alt="Microsoft Logo">
+                <span>Microsoft for Nonprofits</span>
+              </a>
+            </div>
+            <div class="DonorLogo text-center">
+              <a title="Workplace for Good" href="https://www.workplace.com/workplaceforgood">
+                <img src="/img/Donor/Workplace-Logo.png" alt="Workplace Logo">
+                <span>Workplace for Good</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Yearly Report</h5>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-center">
+                  <strong>1 Jan, 2020 - 31 Dec, 2020</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <h5 class="description-header">-$6,359.44</h5>
+                  <span class="description-text">REVENUE</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <h5 class="description-header">$25.00</h5>
+                  <span class="description-text">DONATIONS</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                  <h5 class="description-header">$0.00</h5>
+                  <span class="description-text">SALES</span>
+                </div>
+              </div>
+              <div class="col-sm-3 col-6">
+                <div class="description-block">
+                  <h5 class="description-header">$6,384.44</h5>
+                  <span class="description-text">EXPENDITURES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header border-transparent">
+            <h3 class="card-title">Latest Transactions</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table m-0">
+                <thead>
+                  <tr>
+                    <th>Transaction ID</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Value (USD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00018</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$25.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00017</a></td>
+                    <td>Payment - US CPA</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$1283.75</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00016</a></td>
+                    <td>Payment - TH Legal</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,100.96</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00015</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00014</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00013</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00012</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00011</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00010</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00009</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00008</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00007</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00006</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00005</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00004</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00003</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00002</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                  <tr>
+                    <td><a href="javascript:;">BLTS-00001</a></td>
+                    <td>Donation</td>
+                    <td><span class="badge badge-success">Complete</span></td>
+                    <td>$5,000.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

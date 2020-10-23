@@ -1,0 +1,44 @@
+[
+  {
+    "outputFileName": "wwwroot/bundles/bootstrap.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundles/site.min.css",
+    "inputFiles": [
+      "wwwroot/lib/font-awesome/css/all.css",
+      "wwwroot/lib/admin-lte/dist/css/adminlte.css",
+      "wwwroot/css/SourceSansPro.css",
+      "wwwroot/css/BLTS.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundles/site.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/jquery.js",
+      "wwwroot/js/BLTS.js",
+      "wwwroot/lib/admin-lte/dist/js/adminlte.js",
+      "wwwroot/lib/font-awesome/js/all.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/bundles/bootstrap.min.js",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
