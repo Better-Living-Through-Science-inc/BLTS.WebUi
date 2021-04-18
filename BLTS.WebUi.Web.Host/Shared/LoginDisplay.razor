@@ -1,0 +1,20 @@
+﻿<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <li class="nav-item">
+                <NavLink href="MicrosoftIdentity/Account/SignOut" class="nav-link">
+                    <i class="nav-icon fas fa-sign-out-alt" aria-hidden="true"></i>
+                    <p>Log out</p>
+                </NavLink>
+            </li>
+        </Authorized>
+        <NotAuthorized>
+            <li class="nav-item">
+                <NavLink href="MicrosoftIdentity/Account/SignIn" class="nav-link">
+                    <i class="nav-icon fas fa-sign-in-alt" aria-hidden="true"></i>
+                    <p>Log in</p>
+                </NavLink>
+            </li>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>

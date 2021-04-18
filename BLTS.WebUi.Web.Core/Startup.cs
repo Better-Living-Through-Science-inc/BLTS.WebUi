@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
-namespace BLTS.WebUi.Infrastructure
+namespace BLTS.WebUi.Web.Core
 {
     public class Startup
     {
@@ -16,9 +17,16 @@ namespace BLTS.WebUi.Infrastructure
 
         public void Initialize()
         {
+            /*AutoMapper*/
+            _services.AddAutoMapper(Assembly.GetAssembly(typeof(AutoMapperProfile)));
 
             DependencyInjectionContainer dependencyInjectionStartup = new DependencyInjectionContainer(_services);
             dependencyInjectionStartup.Initialize();
+
+            Infrastructure.Startup infrastructureStartup = new Infrastructure.Startup(_services, _configuration);
+            infrastructureStartup.Initialize();
+
         }
+
     }
 }
