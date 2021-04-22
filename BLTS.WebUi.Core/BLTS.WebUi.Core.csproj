@@ -16,6 +16,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.9.1" />
     <PackageReference Include="System.Diagnostics.EventLog" Version="5.0.1" />
     <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
   </ItemGroup>

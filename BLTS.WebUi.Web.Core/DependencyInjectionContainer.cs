@@ -2,6 +2,7 @@
 using BLTS.WebUi.Configurations;
 using BLTS.WebUi.ContentManagementSystem;
 using BLTS.WebUi.Logs;
+using BLTS.WebUi.UserManagers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 
@@ -26,6 +27,8 @@ namespace BLTS.WebUi.Web.Core
         public void Initialize()
         {
             /*Application Services*/
+            
+            _services.AddTransient<UserAuthenticationManager>();
             _services.AddTransient<IApplicationLogTools, ApplicationLogTools>();
             _services.AddTransient<ContentManagementSystemManager>();
             _services.AddTransient<ConfigurationManager>();

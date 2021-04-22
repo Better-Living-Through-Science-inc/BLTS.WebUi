@@ -17,13 +17,14 @@
     <component type="typeof(Styles)" render-mode="Static" />
 </head>
 <body class="hold-transition sidebar-mini">
+    <partial name="_CookieConsentPartial" />
     <div class="wrapper">
-        <component type="typeof(Header)" render-mode="ServerPrerendered" />
+        <component type="typeof(Header)" render-mode="Static" />
         <component type="typeof(NavMenu)" render-mode="ServerPrerendered" />
         <div class="content-wrapper">
             <component type="typeof(App)" render-mode="ServerPrerendered" />
         </div>
-        <component type="typeof(Footer)" render-mode="ServerPrerendered" />
+        <component type="typeof(Footer)" render-mode="Static" />
     </div>
     <script src="_framework/blazor.server.js"></script>
     <script src="bundles/site.min.js"></script>

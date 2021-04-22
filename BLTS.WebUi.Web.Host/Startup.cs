@@ -28,12 +28,14 @@ namespace BLTS.WebUi.Web
         {
 
             JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
+            services.AddDistributedMemoryCache();
 
-            services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
-                .EnableTokenAcquisitionToCallDownstreamApi(new string[] { Configuration["AzureAdPermissions:ApiCmsScope"] })
+            services.AddMicrosoftIdentityWebAppAuthentication(Configuration, "AzureAd")
+                .EnableTokenAcquisitionToCallDownstreamApi(new string[] { Configuration["AzureAdPermissions:ApiUserScope"] })
                 .AddInMemoryTokenCaches();
 
             services.AddHttpContextAccessor();
+            services.AddOptions();
 
             services.AddControllersWithViews(options =>
             {
@@ -43,44 +45,14 @@ namespace BLTS.WebUi.Web
                 //options.Filters.Add(new AuthorizeFilter(policy));
             }).AddMicrosoftIdentityUI();
 
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-
-
-            //services.AddDistributedMemoryCache();
-
-            //services.Configure<CookiePolicyOptions>(options =>
-            //{
-            //    // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-            //    options.CheckConsentNeeded = context => true;
-            //    options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
-            //    // Handling SameSite cookie according to https://docs.microsoft.com/en-us/aspnet/core/security/samesite?view=aspnetcore-3.1
-            //    options.HandleSameSiteCookieCompatibility();
-            //});
-
-            //services.AddOptions();
-
-            ////services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
-            ////    .EnableTokenAcquisitionToCallDownstreamApi(new string[] { Configuration["AzureAdPermissions:ApiCmsScope"]})
-            ////    .AddInMemoryTokenCaches();
-
-            //services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-            //    .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
-            //    .EnableTokenAcquisitionToCallDownstreamApi(new string[] { Configuration["AzureAdPermissions:ApiCmsScope"]/*, Configuration["AzureAdPermissions:ApiDataScope"]*/ })
-            //    .AddInMemoryTokenCaches();
-
-            ////services.AddControllersWithViews()
-            ////    .AddMicrosoftIdentityUI();
-
-            //services.AddControllersWithViews(options =>
-            //{
-            //    var policy = new AuthorizationPolicyBuilder()
-            //        .RequireAuthenticatedUser()
-            //        .Build();
-            //    options.Filters.Add(new AuthorizeFilter(policy));
-            //    //options.Filters.Add(new MsalUiRequiredExceptionFilter()); //this is the custom exception filter
-            //}).AddMicrosoftIdentityUI();
-
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
+                // Handling SameSite cookie according to https://docs.microsoft.com/en-us/aspnet/core/security/samesite?view=aspnetcore-3.1
+                options.HandleSameSiteCookieCompatibility();
+            });
 
             //services.AddAuthorization(options =>
             //{
@@ -89,8 +61,8 @@ namespace BLTS.WebUi.Web
             //});
 
             services.AddRazorPages();
-            services.AddServerSideBlazor();
-                //.AddMicrosoftIdentityConsentHandler();
+            services.AddServerSideBlazor()
+                .AddMicrosoftIdentityConsentHandler();
 
 
             Core.Startup applicationServicesStartup = new Core.Startup(services, Configuration);
@@ -106,14 +78,14 @@ namespace BLTS.WebUi.Web
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Error404");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            //app.UseCookiePolicy();
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

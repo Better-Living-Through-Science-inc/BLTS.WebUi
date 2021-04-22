@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BLTS.WebUi.Core\BLTS.WebUi.Core.csproj" />
     <ProjectReference Include="..\BLTS.WebUi.Web.Core\BLTS.WebUi.Web.Core.csproj" />
   </ItemGroup>
 

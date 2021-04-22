@@ -1,4 +1,5 @@
-﻿@inject IJSRuntime JsRuntime;
+﻿@namespace BLTS.WebUi.Web.Shared
+@inject IJSRuntime JsRuntime;
 
 @code {
     [Parameter]
@@ -6,14 +7,14 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-      await SetTitle();
+        await SetTitle();
     }
 
     private async Task SetTitle()
     {
-      string pageTitle = !string.IsNullOrWhiteSpace(Title) ? Title + " - " : "";
-      pageTitle += "Better Living Through Science";
+        string pageTitle = !string.IsNullOrWhiteSpace(Title) ? Title + " - " : "";
+        pageTitle += "Better Living Through Science";
 
-      await JsRuntime.InvokeVoidAsync("setTitle", pageTitle);
+        await JsRuntime.InvokeVoidAsync("setTitle", pageTitle);
     }
 }

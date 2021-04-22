@@ -1,0 +1,47 @@
+﻿@using Microsoft.Identity.Web
+@using BLTS.WebUi.UserManagers
+
+@namespace BLTS.WebUi.Web.Shared
+
+@inject NavigationManager _navigationManager
+@inject UserAuthenticationManager _userAuthenticationManager
+
+@code {
+
+}
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            @*<div class="">Hello @context.User.GetDisplayName()!</div>*@
+            <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    @if (string.IsNullOrWhiteSpace(_userAuthenticationManager.GetAccessToken("ApiUser").Result))
+                    {
+                        <NavLink href="/MicrosoftIdentity/Account/SignIn" class="nav-link">
+                            <i class="nav-icon fas fa-sign-in-alt" aria-hidden="true"></i>
+                            <p>Log in</p>
+                        </NavLink>
+                    }
+                    else
+                    {
+                        <NavLink href="/MicrosoftIdentity/Account/SignOut" class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt" aria-hidden="true"></i>
+                            <p>Log out</p>
+                        </NavLink>
+                    }
+                </li>
+            </ul>
+        </Authorized>
+        <NotAuthorized>
+            <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item">
+                    <NavLink href="/MicrosoftIdentity/Account/SignIn" class="nav-link">
+                        <i class="nav-icon fas fa-sign-in-alt" aria-hidden="true"></i>
+                        <p>Log in</p>
+                    </NavLink>
+                </li>
+            </ul>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
