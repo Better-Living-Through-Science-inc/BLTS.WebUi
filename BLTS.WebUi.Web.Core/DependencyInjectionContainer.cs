@@ -3,6 +3,7 @@ using BLTS.WebUi.Configurations;
 using BLTS.WebUi.ContentManagementSystem;
 using BLTS.WebUi.Logs;
 using BLTS.WebUi.UserManagers;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 

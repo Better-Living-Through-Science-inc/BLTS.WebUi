@@ -15,9 +15,9 @@
 }
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <LoginDisplay />
     <div class="sidebar">
         <nav class="mt-2">
-            <LoginDisplay />
             <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
                 @foreach (CmsNavigationMenuEntity singleNavMenu in userAuthorizedNavigationMenuCollection)
                 {
@@ -25,7 +25,8 @@
                     {
                         <li class="nav-item" title="@singleNavMenu.ToolTip">
                             <NavLink class="nav-link" href="@singleNavMenu.SubPath" Match="@singleNavMenu.MenuNavLinkMatch">
-                                <i class="@singleNavMenu.IconClass" aria-hidden="true"></i> <p>@singleNavMenu.DisplayText</p>
+                                <i class="@singleNavMenu.IconClass" aria-hidden="true"></i>
+                                <p>@singleNavMenu.DisplayText</p>
                             </NavLink>
                         </li>
                     }
@@ -33,7 +34,8 @@
                     {
                         <li class="nav-item has-treeview" title="@singleNavMenu.ToolTip">
                             <NavLink class="nav-link" href="@singleNavMenu.SubPath" Match="@singleNavMenu.MenuNavLinkMatch">
-                                <i class="@singleNavMenu.IconClass" aria-hidden="true"></i> <p>@singleNavMenu.DisplayText</p>
+                                <i class="@singleNavMenu.IconClass" aria-hidden="true"></i>
+                                <p>@singleNavMenu.DisplayText</p>
                                 <i class="fas fa-angle-left right"></i>
                             </NavLink>
                             <ul class="nav nav-treeview">
@@ -41,7 +43,8 @@
                                 {
                                     <li class="nav-item" title="@childNavMenu.ToolTip">
                                         <NavLink class="nav-link" href="@childNavMenu.SubPath" Match="@childNavMenu.MenuNavLinkMatch">
-                                            <i class="@childNavMenu.IconClass" aria-hidden="true"></i> <p>@childNavMenu.DisplayText</p>
+                                            <i class="@childNavMenu.IconClass" aria-hidden="true"></i>
+                                            <p>@childNavMenu.DisplayText</p>
                                         </NavLink>
                                     </li>
                                 }

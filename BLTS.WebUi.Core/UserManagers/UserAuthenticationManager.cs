@@ -2,6 +2,8 @@
 using BLTS.WebUi.Logs;
 using Microsoft.Identity.Web;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace BLTS.WebUi.UserManagers
@@ -26,7 +28,7 @@ namespace BLTS.WebUi.UserManagers
         /// </summary>
         /// <param name="apiGroupConfigurationName"></param>
         /// <returns></returns>
-        public async Task<string> GetAccessToken(string apiGroupConfigurationName)
+        public async Task<string> GetAccessToken(string apiGroupConfigurationName = "ApiUser")
         {
             try
             {
@@ -38,6 +40,21 @@ namespace BLTS.WebUi.UserManagers
                 //_applicationLogTools.LogError(authenticationError, new Dictionary<string, dynamic> { { "ClassName", $"WebApi.ApiControllerBase" } });
                 return null;
             }
+        }
+
+        /// <summary>
+        /// checks to see if Microsoft Identity will return a token for a fully authenticated user, if false then user must process normal identity verification for full access
+        /// </summary>
+        /// <returns></returns>
+        public async Task<bool> IsUserFullyAuthenticated(string apiGroupConfigurationName = "ApiUser")
+        {
+            return (string.IsNullOrWhiteSpace(await GetAccessToken(apiGroupConfigurationName)));
+        }
+
+        public string GetUserFullName(ClaimsPrincipal user)
+        {
+
+            return user.Claims.Where(x => x.Type.Equals("name")).FirstOrDefault().Value;
         }
 
     }
